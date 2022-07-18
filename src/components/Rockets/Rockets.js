@@ -9,7 +9,11 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
-import { fetchFormApi, reserveRocket, CancelReservation } from "../../Redux/rockets";
+import {
+  fetchFormApi,
+  reserveRocket,
+  CancelReservation,
+} from "../../Redux/rockets";
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -29,19 +33,28 @@ const Rockets = () => {
         id, name, description, images, reserved,
       }) => (
         <Row key={id} className="mb-4">
-          <Col xs={3}>
+          <Col md={3} xs={12}>
             <Image src={images[0]} thumbnail />
           </Col>
           <Col>
-            <h3>{name}</h3>
+            <h4>{name}</h4>
             <p>
-              {reserved && <Badge bg="info">Reserved</Badge>}
-              {description}
+              {reserved && <Badge bg="success">Reserved</Badge>}
+              {` ${description}`}
             </p>
             {reserved && (
-            <Button onClick={() => HandleCancelReservation(id)} variant="outline-secondary">Cancel reservation</Button>
+            <Button
+              onClick={() => HandleCancelReservation(id)}
+              variant="outline-danger"
+            >
+              Cancel reservation
+            </Button>
             )}
-            {!reserved && <Button onClick={() => HandleBookRocket(id)} variant="primary">Reserve rocket</Button>}
+            {!reserved && (
+            <Button onClick={() => HandleBookRocket(id)} variant="primary">
+              Reserve rocket
+            </Button>
+            )}
           </Col>
         </Row>
       ))}
