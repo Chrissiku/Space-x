@@ -5,7 +5,11 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import logger from "redux-logger";
+import RocketsReducer from "./rockets";
 
-const store = createStore(applyMiddleware(thunk, logger));
+const reducer = combineReducers({
+  rockets: RocketsReducer.reducer,
+});
+const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 export default store;
