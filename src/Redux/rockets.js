@@ -3,7 +3,6 @@
 /* eslint-disable quotes */
 
 import { type } from "@testing-library/user-event/dist/type";
-import Rockets from "../components/Rockets/Rockets";
 
 const FETCH_ROCKETS = "FETCH_ROCKETS";
 const RESERVE_ROCKETS = "RESERVE_ROCKETS";
@@ -26,7 +25,7 @@ export const fetchFormApi = async (dispatch) => {
         id: rocket.rocket_id,
         name: rocket.rocket_name,
         type: rocket.rocket_type,
-        descripion: rocket.descripion,
+        description: rocket.description,
         images: rocket.flickr_images,
       })),
     ),
