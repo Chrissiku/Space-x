@@ -14,8 +14,10 @@ body {
   padding: 0 40px;
   font-family: "Poppins", sans-serif;
 }
+
 .navbar {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 5px;
@@ -45,8 +47,13 @@ body {
   font-size: 20px;
 }
 
-.navbar .nav-link .nav-link:hover,
-.navbar .nav-link .nav-link.active {
+.navbar .nav-link .nav-link:hover {
   text-decoration: underline;
   text-underline-offset: 5px;
+}
+
+@media screen and (min-width: 800px) {
+  .navbar {
+    flex-direction: row;
+  }
 }
