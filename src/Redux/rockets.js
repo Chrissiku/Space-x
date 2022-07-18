@@ -21,6 +21,11 @@ export const reserveRocket = (id) => ({
   id,
 });
 
+export const CancelReservation = (id) => ({
+  type: CANCEL_RESERVATION,
+  id,
+});
+
 export const fetchFormApi = async (dispatch) => {
   const response = await fetch(API_URL);
   const RocketsRender = await response.json();
