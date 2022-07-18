@@ -9,7 +9,7 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
-import { fetchFormApi } from "../../Redux/rockets";
+import { fetchFormApi, reserveRocket } from "../../Redux/rockets";
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -19,6 +19,8 @@ const Rockets = () => {
       dispatch(fetchFormApi);
     }
   });
+
+  const HandleBookRocket = (id) => dispatch(reserveRocket(id));
 
   return (
     <Container className="rockets-container">
@@ -38,7 +40,7 @@ const Rockets = () => {
             {reserved && (
             <Button variant="outline-secondary">Cancel reservation</Button>
             )}
-            {!reserved && <Button variant="primary">Reserve rocket</Button>}
+            {!reserved && <Button onClick={() => HandleBookRocket(id)} variant="primary">Reserve rocket</Button>}
           </Col>
         </Row>
       ))}
