@@ -6,7 +6,6 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import routes from "./assets/routes";
 
-
 function App() {
   return (
     <>
