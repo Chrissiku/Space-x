@@ -51,6 +51,10 @@ body {
   text-decoration: none;
 }
 
+.rockets-container{
+  padding: 20px 0px;
+}
+
 @media screen and (min-width: 800px) {
   .navbar {
     flex-direction: row;

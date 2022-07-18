@@ -20,7 +20,7 @@ const Rockets = () => {
     }
   });
   return (
-    <Container>
+    <Container className="rockets-container">
       {rockets.map(({
         id, name, description, images, reserved,
       }) => (
