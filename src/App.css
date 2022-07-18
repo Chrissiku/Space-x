@@ -47,9 +47,8 @@ body {
   font-size: 20px;
 }
 
-.navbar .nav-link .nav-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 5px;
+.navbar .nav-link .nav-link .link {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 800px) {
