@@ -1,9 +1,20 @@
-import './App.css';
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
+
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header/Header";
+import routes from "./assets/routes";
 
 function App() {
   return (
     <>
-      <h1>Space-x group project</h1>
+      <Header />
+      <Routes>
+        {routes.map(({ path, element }) => (
+          <Route key={path} exact path={path} element={element} />
+        ))}
+      </Routes>
     </>
   );
 }
