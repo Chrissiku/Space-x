@@ -2,12 +2,36 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable quotes */
 
+import { type } from "@testing-library/user-event/dist/type";
 import Rockets from "../components/Rockets/Rockets";
 
 const FETCH_ROCKETS = "FETCH_ROCKETS";
 const RESERVE_ROCKETS = "RESERVE_ROCKETS";
 const CANCEL_RESERVATION = "CANCEL_RESERVATION";
 const initialState = [];
+const API_URL = "https://api.spacexdata.com/v3/rockets";
+
+const LoadAllRockets = (payload) => ({
+  type: FETCH_ROCKETS,
+  payload,
+});
+
+export const fetchFormApi = async (dispatch) => {
+  const response = await fetch(API_URL);
+  const RocketsRender = await response.json();
+
+  dispatch(
+    LoadAllRockets(
+      RocketsRender.map((rocket) => ({
+        id: rocket.rocket_id,
+        name: rocket.rocket_name,
+        type: rocket.rocket_type,
+        descripion: rocket.descripion,
+        images: rocket.flickr_images,
+      })),
+    ),
+  );
+};
 
 const RocketsReducer = (state = initialState, action) => {
   switch (action.type) {
