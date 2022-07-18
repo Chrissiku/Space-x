@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable comma-dangle */
 /* eslint-disable no-unused-vars */
 /* eslint-disable quotes */
 
@@ -15,6 +16,11 @@ const LoadAllRockets = (payload) => ({
   payload,
 });
 
+export const reserveRocket = (id) => ({
+  type: RESERVE_ROCKETS,
+  id,
+});
+
 export const fetchFormApi = async (dispatch) => {
   const response = await fetch(API_URL);
   const RocketsRender = await response.json();
@@ -27,8 +33,8 @@ export const fetchFormApi = async (dispatch) => {
         type: rocket.rocket_type,
         description: rocket.description,
         images: rocket.flickr_images,
-      })),
-    ),
+      }))
+    )
   );
 };
 
