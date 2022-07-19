@@ -5,12 +5,12 @@ import React from "react";
 import TestRenderer from "react-test-renderer";
 import { Provider } from "react-redux";
 import store from "../Redux/ConfigureStore";
-import Missions from "../components/Missions/Missions";
+import Rockets from "../components/Rockets/Rockets";
 
-it("Missions render correctly", () => {
+it("Rockets render correctly", () => {
   const Tree = TestRenderer.create(
     <Provider store={store}>
-      <Missions />
+      <Rockets />
     </Provider>
   );
   expect(Tree).toMatchSnapshot();
