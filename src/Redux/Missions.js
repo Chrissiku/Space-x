@@ -1,41 +1,41 @@
-const FETCH_MISSION = 'FETCH_MISSIONS';
-const JOIN_MISSION = 'JOIN _MISSION';
-const LEAVE_MISSION = 'LEAVE_MISSION';
+const BASE_URL = "https://api.spacexdata.com/v3/missions";
+const LOAD_MISSIONS = "missions/load";
+const JOIN_MISSION = "missions/join";
+const LEAVE_MISSION = "missions/leave";
 
-const initialState = [];
-const BASE_URL = 'https://api.spacexdata.com/v3/missions';
-
-const LoadMissions = (payload) => ({
-  type: FETCH_MISSION,
+const loadMissions = (payload) => ({
+  type: LOAD_MISSIONS,
   payload,
 });
 
-export const fetchFormApi = async (dispatch) => {
+export const fetchMissions = async (dispatch) => {
   const response = await fetch(BASE_URL);
-  const MissionsRender = await response.json();
+  const missions = await response.json();
+
   dispatch(
-    LoadMissions(
-      MissionsRender.map((mission) => ({
+    loadMissions(
+      missions.map((mission) => ({
         id: mission.mission_id,
         name: mission.mission_name,
         description: mission.description,
-      })),
-    ),
+      }))
+    )
   );
 };
 
-const MissionReducer = (state = initialState, action) => {
+const MissionsReducer = (state = [], action) => {
   switch (action.type) {
-    case FETCH_MISSION:
+    case LOAD_MISSIONS:
       return action.payload;
     case JOIN_MISSION:
       return state.map((mission) => {
         if (mission.id !== action.id) {
           return mission;
         }
+
         return {
           ...mission,
-          joined: true,
+          reserved: true,
         };
       });
     case LEAVE_MISSION:
@@ -43,9 +43,10 @@ const MissionReducer = (state = initialState, action) => {
         if (mission.id !== action.id) {
           return mission;
         }
+
         return {
           ...mission,
-          joined: false,
+          reserved: false,
         };
       });
     default:
@@ -53,4 +54,4 @@ const MissionReducer = (state = initialState, action) => {
   }
 };
 
-export default MissionReducer;
+export default MissionsReducer;
