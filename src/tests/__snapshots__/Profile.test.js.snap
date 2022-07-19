@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile render correctly 1`] = `
+<div
+  className="profile-container container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <h4>
+        My Missions
+      </h4>
+      <div
+        className="list-group"
+        onKeyDown={[Function]}
+      />
+    </div>
+    <div
+      className="col"
+    >
+      <h4>
+        My Rockets
+      </h4>
+      <div
+        className="list-group"
+        onKeyDown={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
