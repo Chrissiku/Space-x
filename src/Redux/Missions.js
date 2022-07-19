@@ -8,6 +8,16 @@ const loadMissions = (payload) => ({
   payload,
 });
 
+export const joinMission = (id) => ({
+  type: JOIN_MISSION,
+  id,
+});
+
+export const leaveMission = (id) => ({
+  type: LEAVE_MISSION,
+  id,
+});
+
 export const fetchMissions = async (dispatch) => {
   const response = await fetch(BASE_URL);
   const missions = await response.json();
