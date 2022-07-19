@@ -30,6 +30,7 @@ body {
   align-items: center;
   gap: 25px;
 }
+
 .navbar .brand span {
   font-size: 25px;
   font-weight: 600;
@@ -51,8 +52,12 @@ body {
   text-decoration: none;
 }
 
-.rockets-container{
-  padding: 20px 0px;
+.rockets-container {
+  padding: 20px 0;
+}
+
+.profile-container {
+  margin: 20px;
 }
 
 @media screen and (min-width: 800px) {
