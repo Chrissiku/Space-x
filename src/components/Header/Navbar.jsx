@@ -9,16 +9,14 @@ import routes from "../../assets/routes";
 const NavMenu = () => (
   <Nav className="nav-link">
     {routes.map(({ path, name }) => (
-      <Nav.Link key={path}>
-        <NavLink
-          className="App-link"
-          activeClassName="App-active-link"
-          exact
-          to={path}
-        >
-          {name}
-        </NavLink>
-      </Nav.Link>
+      <NavLink
+        key={path}
+        className={({ isActive }) => (isActive ? "active-link" : undefined)}
+        exact
+        to={path}
+      >
+        {name}
+      </NavLink>
     ))}
   </Nav>
 );

@@ -1,65 +1,75 @@
-# React and Redux
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-If you are not familiar with linters and GitHub Actions, read [root level README](../README.md).
+# Project Name :  Space-x Traveler Hub
 
-## Set-up GitHub Actions
+>[Space-x](https://space-x-traveler.netlify.app/) is a web application for a company that provides commercial and scientific space travel services. The application is with the real live data from the SpaceX API and allow users to book rockets and join selected space missions.
+>
+>
+ ## Project view
+ 
+![Screen](https://user-images.githubusercontent.com/101924220/179762369-de3f9ec2-9a9f-4bcb-8dd9-a39f151f6b79.png)
 
-This GitHub Action is going to run [ESLint](https://eslint.org/) and [Stylelint](https://stylelint.io/) to help you find style issues.
+> In order to achieve this project I used some resources and technologies listed below :
+## Built With
 
-[Stylelint](https://stylelint.io/) is a linter for your stylesheets that helps you avoid errors and enforce conventions.
+- Major languages : JavaScript , JSX and CSS
+- Promise based HTTP : `axios`
+- Toolchain : `Babel`
+- Library and Framework : `React, React-redux, Jest, React-test-renderer`
+- Technologies used : Github, Git, Gitflow and Linters
 
-[ESLint](https://eslint.org/) is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs.
+## Live Demo (Not ava)
 
-Please do the following **steps in this order**:
+Click [Here](https://space-x-traveler.netlify.app/) To open the live demo
 
-1. In the first commit of your feature branch create a `.github/workflows` folder and add a copy of [`.github/workflows/linters.yml`](.github/workflows/linters.yml) to that folder.
-    - **Remember** to use the file linked above
-    - **Remember** that `.github` folder starts with a dot.
-2. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-3. When you open your first pull request you should see the result of the GitHub Actions:
+## Getting Started
 
-![gh actions checks](../assets/images/gh-actions-eslint-stylelint-checks.png)
+To get a local copy up and running follow these simple example steps.
 
-Click on the `Details` link to see the full output and the errors that need to be fixed:
+### Prerequisites ♻️
 
-![gh actions failing checks](../assets/images/gh-actions-html-css-failing-checks.png)
+- A personal computer connected to the internet;
+- Have a working and updated browser.
+- Have a local version control like git installed on your computer
+- Have an account on Github, as an online/remote Version Control System
+- Code editor (Visual studio code, sublime text, notepad++, ...) installed on your computer;
+- To be okay with javaScript ES6
+- Knowledge of HTML and CSS.
 
-## Set-up linters in your local env
+### Setup 🎰
 
-### ESLint
+- Click the [me](https://github.com/Chrissiku/Space-x) and you'll land on the pure repository;
+- click on the green (🟢) button with `Code` Inscription;
+- You can choose to download the project or just clone it if you are familiar with Git and Github;
+- Follow normal step once download in your computer and use it as it's yours.
 
-1. Run 
-    ```
-    npm install --save-dev eslint@7.x eslint-config-airbnb@18.x eslint-plugin-import@2.x eslint-plugin-jsx-a11y@6.x eslint-plugin-react@7.x eslint-plugin-react-hooks@4.x @babel/eslint-parser@7.x @babel/core@7.x  @babel/plugin-syntax-jsx@7.x  @babel/preset-react@7.x @babel/preset-react@7.x
-    ```
-    *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
-2. Copy [.eslintrc.json](./.eslintrc.json) and [.babelrc](./.babelrc) to the root directory of your project.
-3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-4. Run `npx eslint .` on the root of your directory of your project.
-5. Fix linter errors.
-6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Stylelint](https://stylelint.io/user-guide/cli#autofixing-errors) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+### Install
 
-### Stylelint
+- If you are familiar with git, Run `npm install` to get all dependencies required to run the linters checks, otherwise use the downloaded project on your computer without testing files
 
-1. Run
+### Run test 🧪
 
-   ```
-   npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-   ```
+> Run the command bellow inside your `git bash` or command line interface..
 
-   *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
+- `npm run start` : to run the project in your default web Browser
+- `npx stylelint "**/*.{css,scss}"` : for the `css` codebase and use of best practices. you can add
+- `npx eslint .` : for the `JavaScript` codebase and use of best practices
+- > Note that you can add `--fix` keyword to the command for `Css` and/or `JavaScript` to make sure that you avoid all errors coming from your `code editor`
 
-2. Copy [.stylelintrc.json](./.stylelintrc.json) to the root directory of your project.
-3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-4. Run `npx stylelint "**/*.{css,scss}"` on the root of your directory of your project.
-5. Fix linter errors.
-6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Stylelint](https://stylelint.io/user-guide/cli#autofixing-errors) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+## Author
 
-## Test/Deployment Actions
+👤 **Chris Siku**
 
-Feel free to add your own deployment actions which can run your tests and deploy to Heroku.
+- GitHub: [@githubhandle](https://github.com/Chrissiku)
+- Twitter: [@twitterhandle](https://twitter.com/christian_siku)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/chris-siku-4bb53b232/)
 
-Make sure that you do not modify the [`.github/workflows/linters.yml`](.github/workflows/linters.yml) but that you create a separe GitHub Action workflow file for that.
+👤 **Grace Muthui**
+
+- GitHub: [@Grayce Muthui](https://github.com/Graycemuthui)
+- Twitter: [@Grayce_Muthui](https://twitter.com/Grayce_Muthui)
+- LinkedIn: [@Grayce Muthui](https://www.linkedin.com/in/grayce-muthui/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!

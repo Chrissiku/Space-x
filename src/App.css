@@ -43,12 +43,19 @@ body {
   gap: 20px;
 }
 
-.navbar .nav-link .nav-link {
+.navbar .nav-link a {
+  text-decoration: none;
+  font-size: 18px;
   color: blue;
-  font-size: 20px;
+  transition: all 0.3s;
 }
 
-.navbar .nav-link .nav-link .link {
+.navbar .nav-link a.active-link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.unselected {
   text-decoration: none;
 }
 
