@@ -1,7 +1,7 @@
-const BASE_URL = "https://api.spacexdata.com/v3/missions";
-const LOAD_MISSIONS = "missions/load";
-const JOIN_MISSION = "missions/join";
-const LEAVE_MISSION = "missions/leave";
+const BASE_URL = 'https://api.spacexdata.com/v3/missions';
+const LOAD_MISSIONS = 'missions/load';
+const JOIN_MISSION = 'missions/join';
+const LEAVE_MISSION = 'missions/leave';
 
 const loadMissions = (payload) => ({
   type: LOAD_MISSIONS,
@@ -18,8 +18,8 @@ export const fetchMissions = async (dispatch) => {
         id: mission.mission_id,
         name: mission.mission_name,
         description: mission.description,
-      }))
-    )
+      })),
+    ),
   );
 };
 
