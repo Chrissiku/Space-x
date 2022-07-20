@@ -67,8 +67,60 @@ body {
   margin: 20px;
 }
 
+/* Home page */
+
+.homepage .v-background {
+  display: none;
+}
+
+.homepage {
+  background-image: url("https://cdn.pixabay.com/photo/2019/04/06/06/44/astronaut-4106766_960_720.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.homepage {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.homepage .v-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .homepage .v-background {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .homepage .v-background {
+    width: auto;
+    height: 100%;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .navbar {
     flex-direction: row;
+  }
+
+  .homepage {
+    background-image: none;
+  }
+
+  .homepage .v-background {
+    display: block;
   }
 }
