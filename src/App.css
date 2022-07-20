@@ -31,6 +31,14 @@ body {
   gap: 10px;
 }
 
+.homepage span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(6, 20, 32, 0.76);
+}
+
 .navbar .brand span {
   font-size: 18px;
   font-weight: 700;
@@ -41,6 +49,17 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+}
+
+.homepage a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+  padding: 10px 20px;
+  border: 4px solid #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .navbar .nav-link a {
@@ -69,17 +88,10 @@ body {
 
 /* Home page */
 
-.homepage .v-background {
-  display: none;
-}
-
 .homepage {
   background-image: url("https://cdn.pixabay.com/photo/2019/04/06/06/44/astronaut-4106766_960_720.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.homepage {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -89,31 +101,13 @@ body {
 }
 
 .homepage .v-background {
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: -1;
-}
-
-.homepage span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: rgba(6, 20, 32, 0.76);
-}
-
-.homepage a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 30px;
-  font-weight: 900;
-  padding: 10px 20px;
-  border: 4px solid #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -142,6 +136,7 @@ body {
   .navbar {
     flex-direction: row;
   }
+
   .navbar .nav-link a {
     font-size: 18px;
   }
