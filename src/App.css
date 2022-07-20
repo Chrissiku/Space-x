@@ -28,12 +28,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
 }
 
 .navbar .brand span {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .navbar .nav-link {
@@ -45,7 +45,7 @@ body {
 
 .navbar .nav-link a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   color: blue;
   transition: all 0.3s;
 }
@@ -97,6 +97,25 @@ body {
   z-index: -1;
 }
 
+.homepage span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(6, 20, 32, 0.76);
+}
+
+.homepage a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+  padding: 10px 20px;
+  border: 4px solid #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 @media (min-aspect-ratio: 16/9) {
   .homepage .v-background {
     width: 100%;
@@ -112,8 +131,19 @@ body {
 }
 
 @media screen and (min-width: 800px) {
+  .navbar .brand {
+    gap: 25px;
+  }
+
+  .navbar .brand span {
+    font-size: 25px;
+  }
+
   .navbar {
     flex-direction: row;
+  }
+  .navbar .nav-link a {
+    font-size: 18px;
   }
 
   .homepage {

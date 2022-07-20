@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
 /* eslint-disable quotes */
 import { Link } from "react-router-dom";
@@ -14,7 +15,11 @@ function HomePage() {
           />
           Browser is not supporting this web site assets
         </video>
-        <Link to="main/*">Go TO main page</Link>
+        <span>
+          <Link to="main/rockets" className="launch">
+            Launch Now
+          </Link>
+        </span>
       </div>
     </>
   );
