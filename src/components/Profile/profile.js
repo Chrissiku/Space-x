@@ -10,11 +10,11 @@ import { useSelector } from "react-redux";
 const Profile = () => {
   const profileParts = useSelector((state) => [
     {
-      RocketTitle: "My Missions",
+      SectionTitle: "My Missions",
       data: state.missions.filter((mission) => mission.reserved),
     },
     {
-      RocketTitle: "My Rockets",
+      SectionTitle: "My Rockets",
       data: state.rockets.filter((rocket) => rocket.reserved),
     },
   ]);
@@ -22,9 +22,9 @@ const Profile = () => {
     <>
       <Container className="profile-container">
         <Row>
-          {profileParts.map(({ RocketTitle, data }) => (
-            <Col key={RocketTitle}>
-              <h4>{RocketTitle}</h4>
+          {profileParts.map(({ SectionTitle, data }) => (
+            <Col key={SectionTitle}>
+              <h4>{SectionTitle}</h4>
               <ListGroup>
                 {data.map((item) => (
                   <ListGroup.Item key={item.id}>{item.name}</ListGroup.Item>
