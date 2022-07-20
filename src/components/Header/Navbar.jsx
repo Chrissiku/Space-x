@@ -12,7 +12,7 @@ const NavMenu = () => (
       <NavLink
         key={path}
         className={({ isActive }) => (isActive ? "active-link" : undefined)}
-        exact
+        exact="true"
         to={path}
       >
         {name}

@@ -20,7 +20,8 @@ const Rockets = () => {
   const rockets = useSelector((state) => state.rockets);
   useEffect(() => {
     if (!rockets.length) {
-      dispatch(fetchFormApi);
+      // dispatch(fetchFormApi);
+      fetchFormApi(dispatch);
     }
   });
 

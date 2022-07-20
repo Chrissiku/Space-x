@@ -9,11 +9,10 @@ import routes from "./assets/routes";
 function App() {
   return (
     <>
-
       <Header />
       <Routes>
         {routes.map(({ path, element }) => (
-          <Route key={path} exact path={path} element={element} />
+          <Route key={path} exact="true" path={path} element={element} />
         ))}
       </Routes>
     </>
