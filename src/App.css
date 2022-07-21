@@ -10,30 +10,61 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --components-bg: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(30, 12, 100, 0.664) 40%,
+    rgba(255, 255, 255, 0.4) 70%,
+    rgba(30, 12, 100, 0.664) 100%,
+    100%,
+    rgb(0, 0, 0)
+  );
+}
+
 body {
-  padding: 0 40px;
   font-family: "Poppins", sans-serif;
+  background-image: url(./assets/cover.jpg);
+  background-size: cover;
+  width: 100%;
 }
 
 .navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 0 40px;
   gap: 5px;
-  border-bottom: 1px solid rgb(180, 177, 175);
+  background-color: rgba(6, 20, 32, 0.87);
+  border-bottom: 2px solid rgb(6, 20, 32);
 }
 
 .navbar .brand {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
+}
+
+.homepage span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(6, 20, 32, 0.76);
 }
 
 .navbar .brand span {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .navbar .nav-link {
@@ -43,10 +74,21 @@ body {
   gap: 20px;
 }
 
+.homepage a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+  padding: 10px 20px;
+  border: 4px solid #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .navbar .nav-link a {
   text-decoration: none;
-  font-size: 18px;
-  color: blue;
+  font-size: 16px;
+  color: #fff;
   transition: all 0.3s;
 }
 
@@ -60,15 +102,106 @@ body {
 }
 
 .rockets-container {
-  padding: 20px 0;
+  background: var(--components-bg);
+  padding: 9rem 40px 1rem 40px;
+  object-fit: cover;
+  color: black;
+  font-weight: 500;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.missions-container {
+  background: var(--components-bg);
+  padding: 9rem 40px 1rem 40px;
+  object-fit: cover;
+  font-weight: 500;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.content-color {
+  color: black;
 }
 
 .profile-container {
-  margin: 20px;
+  text-align: center;
+  background: var(--components-bg);
+  padding: 9rem 40px 1rem 40px;
+  object-fit: cover;
+  height: 100vh;
+}
+
+/* Home page */
+
+.homepage {
+  background-image: url("https://cdn.pixabay.com/photo/2019/04/06/06/44/astronaut-4106766_960_720.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.homepage .v-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .homepage .v-background {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .homepage .v-background {
+    width: auto;
+    height: 100%;
+  }
 }
 
 @media screen and (min-width: 800px) {
+  .navbar .brand {
+    gap: 25px;
+  }
+
+  .navbar .brand span {
+    font-size: 25px;
+  }
+
   .navbar {
     flex-direction: row;
+  }
+
+  .navbar .nav-link a {
+    font-size: 18px;
+  }
+
+  .homepage {
+    background-image: none;
+  }
+
+  .homepage .v-background {
+    display: block;
+  }
+
+  .rockets-container {
+    padding: 7rem 40px 1rem 40px;
+  }
+
+  .missions-container {
+    padding: 7rem 40px 1rem 40px;
   }
 }

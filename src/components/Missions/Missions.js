@@ -23,8 +23,8 @@ const Missions = () => {
   const leaveMissionHandler = (id) => dispatch(leaveMission(id));
 
   return (
-    <Container>
-      <Table striped bordered hover>
+    <Container fluid="true" className="missions-container">
+      <Table responsive striped bordered hover>
         <thead>
           <tr>
             <th>Mission</th>
@@ -37,12 +37,12 @@ const Missions = () => {
           {missions.map(({
             id, name, description, reserved,
           }) => (
-            <tr key={id}>
+            <tr key={id} className="table-content">
               <td>
-                <p className="fw-bold">{name}</p>
+                <p className="fw-bold content-color">{name}</p>
               </td>
               <td>
-                <p>{description}</p>
+                <p className="content-color">{description}</p>
               </td>
               <td className="align-middle">
                 {reserved && <Badge bg="success">Active Member</Badge>}
@@ -52,7 +52,7 @@ const Missions = () => {
                 {reserved && (
                 <Button
                   size="sm"
-                  variant="outline-danger"
+                  variant="danger"
                   onClick={() => leaveMissionHandler(id)}
                 >
                   Leave Mission
@@ -61,7 +61,7 @@ const Missions = () => {
                 {!reserved && (
                 <Button
                   size="sm"
-                  variant="outline-secondary"
+                  variant="primary"
                   onClick={() => joinMissionHandler(id)}
                 >
                   Join Mission

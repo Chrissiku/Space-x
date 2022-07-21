@@ -8,16 +8,20 @@ import Rockets from "../components/Rockets/Rockets";
 const routes = [
   {
     path: "/",
+    name: "Home",
+  },
+  {
+    path: "rockets",
     name: "Rockets",
     element: <Rockets />,
   },
   {
-    path: "/missions",
+    path: "missions",
     name: "Missions",
     element: <Missions />,
   },
   {
-    path: "/profile",
+    path: "profile",
     name: "Profile",
     element: <Profile />,
   },

@@ -1,15 +1,15 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name :  Space-x Traveler Hub
+# Project Name : Space-x Traveler Hub
 
->[Space-x](https://space-x-traveler.netlify.app/) is a web application for a company that provides commercial and scientific space travel services. The application is with the real live data from the SpaceX API and allow users to book rockets and join selected space missions.
->
->
- ## Project view
- 
+> [Space-x](https://space-x-traveler.netlify.app/) is a web application for a company that provides commercial and scientific space travel services. The application is with the real live data from the SpaceX API and allow users to book rockets and join selected space missions.
+
+## Project view
+
 ![Screen](https://user-images.githubusercontent.com/101924220/179762369-de3f9ec2-9a9f-4bcb-8dd9-a39f151f6b79.png)
 
 > In order to achieve this project I used some resources and technologies listed below :
+
 ## Built With
 
 - Major languages : JavaScript , JSX and CSS
@@ -70,6 +70,14 @@ To get a local copy up and running follow these simple example steps.
 - GitHub: [@Grayce Muthui](https://github.com/Graycemuthui)
 - Twitter: [@Grayce_Muthui](https://twitter.com/Grayce_Muthui)
 - LinkedIn: [@Grayce Muthui](https://www.linkedin.com/in/grayce-muthui/)
+
+## Show your support
+
+- Give a ⭐️ if you like this project!
+
+## Acknowledgements
+
+- Background image by Pixabay in [pexels](https://www.pexels.com/photo/flight-sky-earth-space-2166/)
 
 ## 🤝 Contributing
 
