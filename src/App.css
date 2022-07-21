@@ -10,8 +10,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  --components-bg: linear-gradient(
+    177deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(50, 24, 155, 0.582) 30%,
+    rgba(255, 255, 255, 0.4) 100%,
+    100%,
+    rgb(0, 0, 0)
+  );
+}
+
 body {
-  padding: 0 40px;
   font-family: "Poppins", sans-serif;
   background-image: url(./assets/cover.jpg);
   background-size: cover;
@@ -23,6 +33,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 0 40px;
   gap: 5px;
   border-bottom: 1px solid rgb(180, 177, 175);
 }
@@ -82,30 +93,18 @@ body {
 }
 
 .rockets-container {
-  background:
-    linear-gradient(
-      48deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(186, 98, 21, 0.9668242296918768) 45%,
-      rgba(255, 255, 255, 0.2) 100%,
-      100%,
-      rgb(0, 0, 0)
-    );
-  padding: 20px 0;
+  background: var(--components-bg);
+  padding: 20px 40px;
   object-fit: cover;
+  color: black;
+  font-weight: 500;
 }
 
 .missions-container {
-  background:
-    linear-gradient(
-      177deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(186, 98, 21, 0.7668242296918768) 30%,
-      rgba(255, 255, 255, 0.4) 100%,
-      100%,
-      rgb(0, 0, 0)
-    );
+  background: var(--components-bg);
+  padding: 20px 40px;
   object-fit: cover;
+  font-weight: 500;
 }
 
 .profile-container {

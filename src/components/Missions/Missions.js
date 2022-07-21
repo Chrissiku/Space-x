@@ -23,8 +23,8 @@ const Missions = () => {
   const leaveMissionHandler = (id) => dispatch(leaveMission(id));
 
   return (
-    <Container className="missions-container">
-      <Table striped bordered hover>
+    <Container fluid="true" className="missions-container">
+      <Table responsive striped bordered hover>
         <thead>
           <tr>
             <th>Mission</th>
@@ -42,7 +42,7 @@ const Missions = () => {
                 <p className="fw-bold">{name}</p>
               </td>
               <td>
-                <p>{description}</p>
+                <p className="text-dark">{description}</p>
               </td>
               <td className="align-middle">
                 {reserved && <Badge bg="success">Active Member</Badge>}

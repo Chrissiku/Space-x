@@ -29,7 +29,7 @@ const Rockets = () => {
   const HandleCancelReservation = (id) => dispatch(CancelReservation(id));
 
   return (
-    <Container className="rockets-container">
+    <Container fluid="true" className="rockets-container">
       {rockets.map(({
         id, name, description, images, reserved,
       }) => (
