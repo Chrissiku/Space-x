@@ -20,7 +20,8 @@
 
 ## Live Demo (Not ava)
 
-Click [Here](https://space-x-traveler.netlify.app/) To open the live demo
+- Click [Here](https://space-x-traveler.netlify.app/) To open the live demo
+- CLick [Here](https://deploy-preview-39--space-x-traveler.netlify.app/) To open the deploy-preview of latest changes
 
 ## Getting Started
 
