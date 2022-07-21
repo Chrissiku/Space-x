@@ -37,12 +37,12 @@ const Missions = () => {
           {missions.map(({
             id, name, description, reserved,
           }) => (
-            <tr key={id}>
+            <tr key={id} className="table-content">
               <td>
-                <p className="fw-bold">{name}</p>
+                <p className="fw-bold content-color">{name}</p>
               </td>
               <td>
-                <p className="text-dark">{description}</p>
+                <p className="content-color">{description}</p>
               </td>
               <td className="align-middle">
                 {reserved && <Badge bg="success">Active Member</Badge>}

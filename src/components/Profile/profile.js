@@ -10,25 +10,38 @@ import { useSelector } from "react-redux";
 const Profile = () => {
   const profileParts = useSelector((state) => [
     {
-      SectionTitle: "My Missions",
+      SectionTitle: "Missions",
       data: state.missions.filter((mission) => mission.reserved),
     },
     {
-      SectionTitle: "My Rockets",
+      SectionTitle: "Rockets",
       data: state.rockets.filter((rocket) => rocket.reserved),
     },
   ]);
   return (
     <>
-      <Container className="profile-container">
+      <Container fluid="true" className="profile-container">
         <Row>
           {profileParts.map(({ SectionTitle, data }) => (
-            <Col key={SectionTitle}>
-              <h4>{SectionTitle}</h4>
+            <Col md={6} xs={12} key={SectionTitle}>
+              <h4>
+                My
+                {' '}
+                {SectionTitle}
+              </h4>
               <ListGroup>
-                {data.map((item) => (
-                  <ListGroup.Item key={item.id}>{item.name}</ListGroup.Item>
-                ))}
+                {data.length > 0
+                  ? data.map((item) => (
+                    <ListGroup.Item key={item.id} action variant="secondary">{item.name}</ListGroup.Item>
+                  )) : (
+                    <ListGroup.Item variant="danger">
+                      No
+                      {' '}
+                      {SectionTitle}
+                      {' '}
+                      Selected
+                    </ListGroup.Item>
+                  )}
               </ListGroup>
             </Col>
           ))}
