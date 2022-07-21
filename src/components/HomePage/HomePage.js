@@ -17,7 +17,7 @@ function HomePage() {
         </video>
         <span>
           <Link to="main/rockets" className="launch">
-            Launch Now
+            LAUNCH NOW!
           </Link>
         </span>
       </div>

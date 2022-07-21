@@ -46,7 +46,7 @@ const Rockets = () => {
             {reserved && (
             <Button
               onClick={() => HandleCancelReservation(id)}
-              variant="outline-danger"
+              variant="danger"
             >
               Cancel reservation
             </Button>

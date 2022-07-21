@@ -23,7 +23,7 @@ const Missions = () => {
   const leaveMissionHandler = (id) => dispatch(leaveMission(id));
 
   return (
-    <Container>
+    <Container className="missions-container">
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -52,7 +52,7 @@ const Missions = () => {
                 {reserved && (
                 <Button
                   size="sm"
-                  variant="outline-danger"
+                  variant="danger"
                   onClick={() => leaveMissionHandler(id)}
                 >
                   Leave Mission
@@ -61,7 +61,7 @@ const Missions = () => {
                 {!reserved && (
                 <Button
                   size="sm"
-                  variant="outline-secondary"
+                  variant="primary"
                   onClick={() => joinMissionHandler(id)}
                 >
                   Join Mission

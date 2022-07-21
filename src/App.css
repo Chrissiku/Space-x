@@ -13,6 +13,9 @@
 body {
   padding: 0 40px;
   font-family: "Poppins", sans-serif;
+  background-image: url(./assets/cover.jpg);
+  background-size: cover;
+  width: 100%;
 }
 
 .navbar {
@@ -65,7 +68,7 @@ body {
 .navbar .nav-link a {
   text-decoration: none;
   font-size: 16px;
-  color: blue;
+  color: #fff;
   transition: all 0.3s;
 }
 
@@ -79,11 +82,35 @@ body {
 }
 
 .rockets-container {
+  background:
+    linear-gradient(
+      48deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(186, 98, 21, 0.9668242296918768) 45%,
+      rgba(255, 255, 255, 0.2) 100%,
+      100%,
+      rgb(0, 0, 0)
+    );
   padding: 20px 0;
+  object-fit: cover;
+}
+
+.missions-container {
+  background:
+    linear-gradient(
+      177deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(186, 98, 21, 0.7668242296918768) 30%,
+      rgba(255, 255, 255, 0.4) 100%,
+      100%,
+      rgb(0, 0, 0)
+    );
+  object-fit: cover;
 }
 
 .profile-container {
   margin: 20px;
+  text-align: center;
 }
 
 /* Home page */
