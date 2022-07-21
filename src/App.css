@@ -82,7 +82,7 @@ body {
 }
 
 .rockets-container {
-  background:
+  /* background:
     linear-gradient(
       48deg,
       rgba(0, 0, 0, 1) 0%,
@@ -90,13 +90,13 @@ body {
       rgba(255, 255, 255, 0.2) 100%,
       100%,
       rgb(0, 0, 0)
-    );
+    ); */
   padding: 20px 0;
   object-fit: cover;
 }
 
 .missions-container {
-  background:
+  /* background:
     linear-gradient(
       177deg,
       rgba(0, 0, 0, 0.2) 0%,
@@ -104,7 +104,7 @@ body {
       rgba(255, 255, 255, 0.4) 100%,
       100%,
       rgb(0, 0, 0)
-    );
+    ); */
   object-fit: cover;
 }
 
