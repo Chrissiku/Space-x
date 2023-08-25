@@ -14,4 +14,4 @@ it("Missions render correctly", () => {
     </Provider>
   );
   expect(Tree).toMatchSnapshot();
-});
+}); 
