@@ -2,6 +2,6 @@
 
 exports[`Rockets render correctly 1`] = `
 <div
-  className="rockets-container container"
+  className="py-5 px-0 container"
 />
 `;

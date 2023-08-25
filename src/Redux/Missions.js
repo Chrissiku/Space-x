@@ -33,7 +33,7 @@ export const fetchMissions = async (dispatch) => {
   );
 };
 
-const MissionsReducer = (state = [], action) => {
+const MissionsReducer = (state = [], action = null) => {
   switch (action.type) {
     case LOAD_MISSIONS:
       return action.payload;

@@ -2,7 +2,7 @@
 
 exports[`Profile render correctly 1`] = `
 <div
-  className="profile-container container"
+  className="m-5 container"
 >
   <div
     className="row"

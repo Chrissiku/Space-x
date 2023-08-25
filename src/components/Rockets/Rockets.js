@@ -15,7 +15,7 @@ import {
   CancelReservation,
 } from "../../Redux/rockets";
 
-const Rockets = () => {
+function Rockets() {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets);
   useEffect(() => {
@@ -29,7 +29,7 @@ const Rockets = () => {
   const HandleCancelReservation = (id) => dispatch(CancelReservation(id));
 
   return (
-    <Container className="rockets-container">
+    <Container className="py-5 px-0">
       {rockets.map(({
         id, name, description, images, reserved,
       }) => (
@@ -44,15 +44,12 @@ const Rockets = () => {
               {` ${description}`}
             </p>
             {reserved && (
-            <Button
-              onClick={() => HandleCancelReservation(id)}
-              variant="outline-danger"
-            >
+            <Button onClick={() => HandleCancelReservation(id)} variant="outline-danger">
               Cancel reservation
             </Button>
             )}
             {!reserved && (
-            <Button onClick={() => HandleBookRocket(id)} variant="primary">
+            <Button onClick={() => HandleBookRocket(id)} variant="primary" className="text-blue-700">
               Reserve rocket
             </Button>
             )}
@@ -61,5 +58,5 @@ const Rockets = () => {
       ))}
     </Container>
   );
-};
+}
 export default Rockets;

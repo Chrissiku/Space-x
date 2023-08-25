@@ -7,7 +7,7 @@ import {
 import { useSelector } from "react-redux";
 // import { Row } from "react-bootstrap/Row";
 
-const Profile = () => {
+function Profile() {
   const profileParts = useSelector((state) => [
     {
       RocketTitle: "My Missions",
@@ -19,23 +19,21 @@ const Profile = () => {
     },
   ]);
   return (
-    <>
-      <Container className="profile-container">
-        <Row>
-          {profileParts.map(({ RocketTitle, data }) => (
-            <Col key={RocketTitle}>
-              <h4>{RocketTitle}</h4>
-              <ListGroup>
-                {data.map((item) => (
-                  <ListGroup.Item key={item.id}>{item.name}</ListGroup.Item>
-                ))}
-              </ListGroup>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </>
+    <Container className="m-5">
+      <Row>
+        {profileParts.map(({ RocketTitle, data }) => (
+          <Col key={RocketTitle}>
+            <h4>{RocketTitle}</h4>
+            <ListGroup>
+              {data.map((item) => (
+                <ListGroup.Item key={item.id}>{item.name}</ListGroup.Item>
+              ))}
+            </ListGroup>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
-};
+}
 
 export default Profile;
