@@ -43,7 +43,7 @@ export const fetchFormApi = async (dispatch) => {
   );
 };
 
-const RocketsReducer = (state = initialState, action) => {
+const RocketsReducer = (state = initialState, action = null) => {
   switch (action.type) {
     case FETCH_ROCKETS:
       return action.payload;
