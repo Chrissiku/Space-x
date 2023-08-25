@@ -9,7 +9,7 @@ import Button from "react-bootstrap/Button";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchMissions, joinMission, leaveMission } from "../../Redux/Missions";
 
-const Missions = () => {
+function Missions() {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missions);
 
@@ -74,6 +74,6 @@ const Missions = () => {
       </Table>
     </Container>
   );
-};
+}
 
 export default Missions;

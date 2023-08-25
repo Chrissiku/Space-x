@@ -15,7 +15,7 @@ import {
   CancelReservation,
 } from "../../Redux/rockets";
 
-const Rockets = () => {
+function Rockets() {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets);
   useEffect(() => {
@@ -29,37 +29,32 @@ const Rockets = () => {
   const HandleCancelReservation = (id) => dispatch(CancelReservation(id));
 
   return (
-    <Container className="rockets-container">
-      {rockets.map(({
-        id, name, description, images, reserved,
-      }) => (
-        <Row key={id} className="mb-4">
-          <Col md={3} xs={12}>
-            <Image src={images[0]} thumbnail />
-          </Col>
-          <Col>
-            <h4>{name}</h4>
-            <p>
-              {reserved && <Badge bg="success">Reserved</Badge>}
-              {` ${description}`}
-            </p>
-            {reserved && (
-            <Button
-              onClick={() => HandleCancelReservation(id)}
-              variant="outline-danger"
-            >
-              Cancel reservation
-            </Button>
-            )}
-            {!reserved && (
-            <Button onClick={() => HandleBookRocket(id)} variant="primary">
-              Reserve rocket
-            </Button>
-            )}
-          </Col>
-        </Row>
-      ))}
-    </Container>
-  );
-};
+		<Container className='py-5 px-0'>
+			{rockets.map(({ id, name, description, images, reserved }) => (
+				<Row key={id} className='mb-4'>
+					<Col md={3} xs={12}>
+						<Image src={images[0]} thumbnail />
+					</Col>
+					<Col>
+						<h4>{name}</h4>
+						<p>
+							{reserved && <Badge bg='success'>Reserved</Badge>}
+							{` ${description}`}
+						</p>
+						{reserved && (
+							<Button onClick={() => HandleCancelReservation(id)} variant='outline-danger'>
+								Cancel reservation
+							</Button>
+						)}
+						{!reserved && (
+							<Button onClick={() => HandleBookRocket(id)} variant='primary' className="text-blue-700">
+								Reserve rocket
+							</Button>
+						)}
+					</Col>
+				</Row>
+			))}
+		</Container>
+  )
+}
 export default Rockets;
